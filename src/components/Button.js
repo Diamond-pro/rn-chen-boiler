@@ -1,15 +1,17 @@
 // @flow
 import React from 'react';
 import {
-  View,
+  TouchableOpacity
 } from 'react-native';
 
-import { colors } from '../styles';
-
-type Props = {}
+type Props = {
+  onPress: Function,
+  children: any
+}
 
 export default (props: Props) => (
-  <View />
+  <TouchableOpacity onPress={props.onPress}>
+    {props.children}
+  </TouchableOpacity>
 );
 
-const styles = StyleSheet.create({});
